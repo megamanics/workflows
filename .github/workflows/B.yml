@@ -1,0 +1,16 @@
+name: WorkflowB
+
+on:
+  workflow_call:
+  workflow_dispatch:
+  push:
+
+jobs:
+  BJob1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: B Step 1
+        run: echo B Step 1
+      - name: CallA
+        uses: .github/workflows/A
