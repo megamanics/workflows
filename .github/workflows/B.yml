@@ -16,5 +16,5 @@ jobs:
       #- name: CallA
       #  uses: megamanics/workflows/.github/workflows/A.yml@main
   BJob2:
-   needs: BJob1
+    needs: BJob1
     uses: megamanics/workflows/.github/workflows/A.yml@main
