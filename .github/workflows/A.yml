@@ -1,4 +1,4 @@
-name: A
+name: WorkflowA
 
 on:
   workflow_call:
