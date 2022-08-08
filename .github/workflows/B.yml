@@ -15,9 +15,9 @@ jobs:
       #reusable workflows should be referenced at the top-level `jobs.*.uses' key, not within steps  
       #- name: CallA
       #  uses: megamanics/workflows/.github/workflows/A.yml@main
-  BJob2:
-    needs: BJob1
-    uses: megamanics/workflows/.github/workflows/A.yml@main
+  #BJob2:
+  #  needs: BJob1
+  #  uses: megamanics/workflows/.github/workflows/A.yml@main
     #error parsing called workflow "devops-testbed/intake/.github/workflows/main.yml@main": 
     #error parsing called workflow "megamanics/workflows/.github/workflows/C.yml@main": 
     #error parsing called workflow "megamanics/workflows/.github/workflows/B.yml@main": 
