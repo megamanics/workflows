@@ -18,3 +18,5 @@ jobs:
   CJob2:
     needs: CJob1
     uses: megamanics/workflows/.github/workflows/B.yml@main
+  CJob3:
+    uses: devops-testbed/intake/.github/workflows/main.yml@main
