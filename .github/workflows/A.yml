@@ -12,3 +12,5 @@ jobs:
       - uses: actions/checkout@v3
       - name: A Step 1
         run: echo Workflow A Ajob1 Step1
+  AJob2:
+    uses: devops-testbed/intake/.github/workflows/main.yml@main
