@@ -12,13 +12,8 @@ jobs:
       - uses: actions/checkout@v3
       - name: B Step 1
         run: echo B Step 1
-      - name: CallA
-        uses: megamanics/workflows/.github/workflows/A.yml@main
+      #reusable workflows should be referenced at the top-level `jobs.*.uses' key, not within steps  
+      #- name: CallA
+      #  uses: megamanics/workflows/.github/workflows/A.yml@main
   BJob2:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: B Step 2
-        run: echo B Step 2
-      - name: CallA
-        uses: megamanics/workflows/.github/workflows/A.yml@main
+    uses: megamanics/workflows/.github/workflows/A.yml@main
