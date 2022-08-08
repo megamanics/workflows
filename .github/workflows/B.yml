@@ -13,4 +13,12 @@ jobs:
       - name: B Step 1
         run: echo B Step 1
       - name: CallA
-        uses: .github/workflows/A
+        uses: megamanics/workflows/.github/workflows/A.yml@main
+  BJob2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: B Step 2
+        run: echo B Step 2
+      - name: CallA
+        uses: megamanics/workflows/.github/workflows/A.yml@main
