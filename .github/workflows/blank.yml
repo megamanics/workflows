@@ -1,0 +1,14 @@
+name: A
+
+on:
+  workflow_call:
+  workflow_dispatch:
+  push:
+
+jobs:
+  AJob1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: A Step 1
+        run: echo Hello, world!
