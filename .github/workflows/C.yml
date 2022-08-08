@@ -1,0 +1,19 @@
+name: WorkflowC
+
+on:
+  workflow_call:
+  workflow_dispatch:
+  push:
+
+jobs:
+  CJob1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: C Step 1
+        run: echo C Step 1
+      #reusable workflows should be referenced at the top-level `jobs.*.uses' key, not within steps  
+      #- name: CallA
+      #  uses: megamanics/workflows/.github/workflows/A.yml@main
+  CJob2:
+    uses: megamanics/workflows/.github/workflows/B.yml@main
