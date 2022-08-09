@@ -12,7 +12,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           path: event.json
-      - run: env > env.txt
+      - run: env | sort > env.txt
       - uses: actions/upload-artifact@v3
         with:
           path: env.txt
